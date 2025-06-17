@@ -1,0 +1,54 @@
+body {
+  font-family: serif;
+  text-align: center;
+  background:#f9f9f9;
+  padding: 20px;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.green-bg {
+  background-color: #21653b;
+}
+
+.red-bg {
+  background-color: #4a0b14;
+}
+.hr-green{
+border: none; /* เอาเส้นขอบเดิมออกก่อน */
+  height: 1px;   /* กำหนดความหนา */
+  background-color: #21653b; /* สีเขียว */
+  margin: 20px 0;
+}
+.hr-red{
+border: none; /* เอาเส้นขอบเดิมออกก่อน */
+  height: 1px;   /* กำหนดความหนา */
+  background-color:  #4a0b14; /* สีเขียว */
+  margin: 20px 0;
+}
+hr {
+    border: none; /* เอาเส้นขอบเดิมออกก่อน */
+  height: 1px;   /* กำหนดความหนา */
+  background-color: black; /* สีเขียว */
+  margin: 20px 0;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button.large {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+button.large-2 {
+  font-size: 40px;
+  padding: 15px 25px;
+}

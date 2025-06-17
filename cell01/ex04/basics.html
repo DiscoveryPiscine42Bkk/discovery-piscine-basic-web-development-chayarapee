@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+         /* เปลี่ยนพื้นหลังลบ style ใน bodyทึ่งให้หมดด้วย margin padding 0 */
+        body{
+            background-color: pink;
+            margin: 0%;
+            padding: 0%;
+            font-family: monospace;
+        }
+        /* เปลี่ยนพื้นหลังของ nav ให้เป็นสีขาว และเพิ่ม margin ด้านล่าง 40px ตั้งให้ตัวหนังสืออยู่ตรงกลาง*/
+        nav {
+            background-color: #ffffff;
+            margin-bottom: 40px; 
+            padding: 10px;
+            text-align: center;
+            font-size: xx-large;
+        }
+        /* จัดของตัวหยังสือใน contentner ให้อยู่ตรงกลาง*/
+        .contentner {
+            text-align: center;
+        }
+        /* แต่ง h1 */
+        h1{
+            color: gray;
+            font-size: 60px;
+            margin: 20px 0;
+        }
+        /*จัดรูปให้อยู่แถวเดียวกันด้วย flexdirection: row จัด center อยู่ตรงจอ จัดเรียงของด้วย align-items: flex-start*/
+        .img-contentner {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: flex-start
+        }
+       
+       
+        /*จัดตัวหนังสือใน img-contentner ให้อยู่ตรงกลาง*/
+         .img-item a {
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        /*แต่ง เส้นแบ่ง*/
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #333;
+            margin: 30px 0;
+        }
+        /*แต่ง footer ให้อยู่ตรงกลางใส่ font*/
+        footer {
+            text-align: center;
+            font-style: italic;
+            font-family: 'Courier New', monospace;
+            color: #333;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>Basic</nav>
+    <div class="contentner">
+        <h1>So Bigger ★</h1>
+        <div class="img-contentner">
+            <div class="img-item">
+            <img src="https://www.billboard.com/wp-content/uploads/2022/08/laptop-store-billboard-1548.jpg?w=942&h=623&crop=1" alt="macbook " style="height: 250px;">
+            
+            <a href="https://www.studio7thailand.com/th/p/apple-macbook-air-15-m3-chip-8c-cpu10c-gpu16gb512gb-space-gray-2024-mxd13tha_dn38xl">Buy Macbook </a>
+            </div>
+            <div class="img-item">
+            <img src="https://www.mega-bangna.com/public/uploads/store/345.jpg" alt="stdio 7 " style="height: 250px;" object-fit: cover;>
+            <a href="https://www.studio7thailand.com/th">studio7thailand</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>© wil2021</footer>
+</body>
+</html>

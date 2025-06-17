@@ -1,0 +1,93 @@
+<!-- calc.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input, select {
+      margin: 10px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    #tryBtn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>It's over 9000!</h1>
+  
+  <!-- ช่องกรอกตัวเลข -->
+  <input type="text" id="left" placeholder="Enter first number">
+  
+  <!-- ตัวเลือก operator -->
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  
+  <!-- ช่องกรอกตัวเลข -->
+  <input type="text" id="right" placeholder="Enter second number">
+  
+  <!-- ปุ่มส่ง -->
+  <input type="submit" value="Try me!" id="tryBtn">
+
+  <script>
+    const btn = document.getElementById('tryBtn');
+
+    btn.addEventListener('click', function () {
+      const left = document.getElementById('left').value;
+      const right = document.getElementById('right').value;
+      const op = document.getElementById('operator').value;
+
+      const num1 = parseInt(left, 10);
+      const num2 = parseInt(right, 10);
+
+      // เช็คว่าเป็นเลขจำนวนเต็มบวกหรือไม่
+      if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
+        alert('Error :(');
+        return;
+      }
+
+      // แสดง alert ถ้าหารด้วย 0
+      if ((op === '/' || op === '%') && num2 === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      // ทำการคำนวณ
+      let result;
+      switch (op) {
+        case '+': result = num1 + num2; break;
+        case '-': result = num1 - num2; break;
+        case '*': result = num1 * num2; break;
+        case '/': result = Math.floor(num1 / num2); break; // ปัดเศษลง
+        case '%': result = num1 % num2; break;
+      }
+
+      // แสดงผลลัพธ์
+      alert(`Result: ${result}`);
+      console.log(`Result: ${result}`);
+    });
+
+    // แจ้งเตือนทุก 30 วิ
+    setInterval(() => {
+      alert('Please, use me...');
+    }, 30000);
+  </script>
+</body>
+</html>
